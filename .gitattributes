@@ -1,5 +1,6 @@
 src/generated/**/.cache/cache text eol=lf
 *.json text eol=lf
+*.name text eol=lf
 * text eol=lf
 *.bat text eol=crlf
 *.patch text eol=lf

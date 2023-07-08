@@ -22,7 +22,7 @@ side = "BOTH" # Side this dependency is applied on - 'BOTH', 'CLIENT' or 'SERVER
 [[dependencies.${ mod_id }]]
 modId = "minecraft"
 mandatory = true
-versionRange = "${# The mod's supported Minecraft Version range
-mc_version_range}"
+# The mod's supported Minecraft Version range
+versionRange = "${mc_version_range}"
 ordering = "NONE"
 side = "BOTH"

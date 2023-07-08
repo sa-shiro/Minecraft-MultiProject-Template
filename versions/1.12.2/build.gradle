@@ -93,7 +93,7 @@ jar {
 }
 
 processResources {
-    filesMatching(['pack.mcmeta', 'mods.toml', 'META-INF/mods.toml', 'mixins.json', '*.mixins.json']) {
+    filesMatching(['mcmod.info', 'pack.mcmeta', 'mods.toml', 'META-INF/mods.toml', 'mixins.json', '*.mixins.json']) {
         expand project.properties
     }
 }
