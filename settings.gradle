@@ -20,7 +20,7 @@ plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '0.5.0'
 }
 
-rootProject.name = 'Forge Multiproject Template'
+rootProject.name = 'Multiproject Template'
 // 1.12.2 fails to import, its not recommended to use this version with this project,
 // unless you know how to fix this
 
