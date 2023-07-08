@@ -1,8 +1,8 @@
-# Minecraft Forge Multi Project Template
+# Minecraft Multi Project Template
 
-This project is a Template to manage multiple *Minecraft Forge Projects* of ***ANY*** version
+This project is a Template to manage multiple *Minecraft Forge/Fabric Projects* of ***ANY*** version
 
-The Template contains examples for all supported major Minecraft Versions (1.12.2 - 1.20.1) using the latest ForgeGradle Version.
+The Template contains examples for all supported major Minecraft Versions for Forge (1.12.2 - 1.20.1) using the latest ForgeGradle Version.
 
 ## Getting Started
 
