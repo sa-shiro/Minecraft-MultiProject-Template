@@ -1,0 +1,56 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            name = 'Forge'
+            url = 'https://maven.minecraftforge.net/'
+        }
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        maven {
+            name = 'Sponge Snapshots'
+            url = 'https://repo.spongepowered.org/repository/maven-public/'
+        }
+    }
+}
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.5.0'
+}
+
+rootProject.name = 'Forge Multiproject Template'
+// 1.12.2 fails to import, its not recommended to use this version with this project,
+// unless you know how to fix this
+
+//include "versions:1.12.2"
+
+// ----------
+//include "versions:1.13.2"
+//include "versions:1.14.4"
+//include "versions:1.15.2"
+//include "versions:1.16.5"
+//include "versions:1.17.1"
+//include "versions:1.18.2"
+//include "versions:1.19.2"
+//include "versions:1.19.2"
+//include "versions:1.19.4"
+//include "versions:1.20.1"
+// ----------
+
+// You can add as many modules as you want, for this copy the content of "example_module" to each new module!
+include "versions:example_module"
+
+// Example how to use multiple modules within a module:
+
+// include "versions:MODULE_NAME",
+//      "versions:MODULE_NAME:SUB_MODULE_NAME",
+//      "versions:MODULE_NAME:SUB_MODULE_NAME"
+
+// You can even add a Multi-Loader project ! (using Architectury may require some extra steps)
+
+//include "versions:multiproject_module",
+//        "versions:multiproject_module:common",
+//        "versions:multiproject_module:fabric",
+//        "versions:multiproject_module:forge"

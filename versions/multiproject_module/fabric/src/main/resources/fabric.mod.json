@@ -1,0 +1,36 @@
+{
+    "schemaVersion": 1,
+    "id": "${mod_id}",
+    "version": "${version}",
+    "name": "${mod_name}",
+    "description": "${mod_description}",
+    "authors": [
+        "${mod_author}"
+    ],
+    "contact": {
+        "sources": "${source}",
+        "issues": "${source}/issues",
+        "discord": "${discord}",
+        "curseforge": "${curseforge_page}",
+        "modrinth": "${modrinth_page}",
+        "homepage": "${homepage}",
+        "email": "${mod_author_email}"
+    },
+    "license": "${mod_license}",
+    "icon": "assets/${mod_id}/${logo_file}",
+    "environment": "*",
+    "entrypoints": {
+        "main": [ "${entrypoint_main}" ],
+        "client": [ "${entrypoint_client}" ]
+    },
+    "mixins": [
+        "mixins.json",
+        "fabric.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": "${fabric_version_range}",
+        "minecraft": "${fabric_mc_version_range}",
+        "java": "${java_version_range}"
+    },
+    "suggests": {}
+}
