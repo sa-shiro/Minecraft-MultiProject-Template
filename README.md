@@ -7,12 +7,12 @@ The Template contains examples for all supported major Minecraft Versions for Fo
 ## Getting Started
 
 - clone this repo
-- if needed, delete all versions from `versions/` and the import statement from `settings.gradle` you don't need
-- uncomment the versions you need (the import of `example_module` is enabled by default)
+- if needed, delete all modules from `modules/` and the import statement from `settings.gradle` you don't need
+- uncomment the modules you need (the import of `example_module` is enabled by default)
 - open / import this project in IntelliJ IDEA (eclipse has not been tested and may cause issues!)
 - edit `gradle.properties` to your needs
 
-Alternatively you can delete all versions from `versions/` and start from scratch using the `example_module`, simply copy and rename it and change `MODULE_NAME/settings.gradle` to your needs  
+Alternatively you can delete all modules from `modules/` and start from scratch using the `example_module`, simply copy and rename it and change `MODULE_NAME/settings.gradle` to your needs  
 (for <= 1.16.5 copy the version u want instead as buildscript is slightly different)
 
 ### Additional info:
