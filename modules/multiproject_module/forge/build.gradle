@@ -34,7 +34,7 @@ minecraft {
             mods {
                 modClientRun {
                     source sourceSets.main
-                    source project(":versions:multiproject_module:common").sourceSets.main
+                    source project(":modules:multiproject_module:common").sourceSets.main
                 }
             }
         }
@@ -48,7 +48,7 @@ minecraft {
             mods {
                 modServerRun {
                     source sourceSets.main
-                    source project(":versions:multiproject_module:common").sourceSets.main
+                    source project(":modules:multiproject_module:common").sourceSets.main
                 }
             }
         }
@@ -65,7 +65,7 @@ minecraft {
             mods {
                 modDataRun {
                     source sourceSets.main
-                    source project(":versions:multiproject_module:common").sourceSets.main
+                    source project(":modules:multiproject_module:common").sourceSets.main
                 }
             }
         }
@@ -76,22 +76,22 @@ sourceSets.main.resources.srcDir 'src/generated/resources'
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    compileOnly project(":versions:multiproject_module:common")
+    compileOnly project(":modules:multiproject_module:common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
 }
 
 tasks.withType(JavaCompile).configureEach {
-    source(project(":versions:multiproject_module:common").sourceSets.main.allSource)
+    source(project(":modules:multiproject_module:common").sourceSets.main.allSource)
 }
 tasks.withType(Javadoc).configureEach {
-    source(project(":versions:multiproject_module:common").sourceSets.main.allJava)
+    source(project(":modules:multiproject_module:common").sourceSets.main.allJava)
 }
 tasks.named("sourcesJar", Jar) {
-    from(project(":versions:multiproject_module:common").sourceSets.main.allSource)
+    from(project(":modules:multiproject_module:common").sourceSets.main.allSource)
 }
 
 processResources {
-    from project(":versions:multiproject_module:common").sourceSets.main.resources
+    from project(":modules:multiproject_module:common").sourceSets.main.resources
 
     // Doing this here instead of the parent build.gradle fixes `mods.toml` not getting processed properly, for some reason
     filesMatching(['META-INF/mods.toml', 'mods.toml', 'pack.mcmeta']) {

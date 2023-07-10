@@ -13,12 +13,12 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
-    implementation project(":versions:multiproject_module:common")
+    implementation project(":modules:multiproject_module:common")
 }
 
 loom {
-    if (project(":versions:multiproject_module:common").file("src/main/resources/${mod_id}.accesswidener").exists()) {
-        accessWidenerPath.set(project(":versions:multiproject_module:common").file("src/main/resources/${mod_id}.accesswidener"))
+    if (project(":modules:multiproject_module:common").file("src/main/resources/${mod_id}.accesswidener").exists()) {
+        accessWidenerPath.set(project(":modules:multiproject_module:common").file("src/main/resources/${mod_id}.accesswidener"))
     }
     mixin {
         defaultRefmapName.set("${mod_id}.refmap.json")
@@ -40,17 +40,17 @@ loom {
 }
 
 tasks.withType(JavaCompile).configureEach {
-    source(project(":versions:multiproject_module:common").sourceSets.main.allSource)
+    source(project(":modules:multiproject_module:common").sourceSets.main.allSource)
 }
 tasks.withType(Javadoc).configureEach {
-    source(project(":versions:multiproject_module:common").sourceSets.main.allJava)
+    source(project(":modules:multiproject_module:common").sourceSets.main.allJava)
 }
 tasks.named("sourcesJar", Jar) {
-    from(project(":versions:multiproject_module:common").sourceSets.main.allSource)
+    from(project(":modules:multiproject_module:common").sourceSets.main.allSource)
 }
 
 processResources {
-    from project(":versions:multiproject_module:common").sourceSets.main.resources
+    from project(":modules:multiproject_module:common").sourceSets.main.resources
 }
 
 publishing {

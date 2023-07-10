@@ -25,34 +25,34 @@ rootProject.name = 'Multiproject Template'
 
 // === FORGE ===
 // ----------
-//include "versions:1.12.2"
-//include "versions:1.13.2"
-//include "versions:1.14.4"
-//include "versions:1.15.2"
-//include "versions:1.16.5"
-//include "versions:1.17.1"
-//include "versions:1.18.2"
-//include "versions:1.19.2"
-//include "versions:1.19.2"
-//include "versions:1.19.4"
-//include "versions:1.20.1"
+//include "modules:1.12.2"
+//include "modules:1.13.2"
+//include "modules:1.14.4"
+//include "modules:1.15.2"
+//include "modules:1.16.5"
+//include "modules:1.17.1"
+//include "modules:1.18.2"
+//include "modules:1.19.2"
+//include "modules:1.19.2"
+//include "modules:1.19.4"
+//include "modules:1.20.1"
 // ----------
 // === FABRIC ===
-include "versions:fabric_1.20.1"
+include "modules:fabric_1.20.1"
 // ----------
 
 // You can add as many modules as you want, for this copy the content of "example_module" to each new module!
-include "versions:example_module"
+include "modules:example_module"
 
 // Example how to use multiple modules within a module:
 
-// include "versions:MODULE_NAME",
-//      "versions:MODULE_NAME:SUB_MODULE_NAME",
-//      "versions:MODULE_NAME:SUB_MODULE_NAME"
+// include "modules:MODULE_NAME",
+//      "modules:MODULE_NAME:SUB_MODULE_NAME",
+//      "modules:MODULE_NAME:SUB_MODULE_NAME"
 
 // You can even add a Multi-Loader project ! (using Architectury may require some extra steps)
 
-//include "versions:multiproject_module",
-//        "versions:multiproject_module:common",
-//        "versions:multiproject_module:fabric",
-//        "versions:multiproject_module:forge"
+//include "modules:multiproject_module",
+//        "modules:multiproject_module:common",
+//        "modules:multiproject_module:fabric",
+//        "modules:multiproject_module:forge"
