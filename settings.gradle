@@ -1,5 +1,6 @@
 pluginManagement {
     repositories {
+        mavenCentral()
         gradlePluginPortal()
         maven {
             name = 'Forge'
@@ -21,12 +22,10 @@ plugins {
 }
 
 rootProject.name = 'Multiproject Template'
-// 1.12.2 fails to import, its not recommended to use this version with this project,
-// unless you know how to fix this
 
-//include "versions:1.12.2"
-
+// === FORGE ===
 // ----------
+//include "versions:1.12.2"
 //include "versions:1.13.2"
 //include "versions:1.14.4"
 //include "versions:1.15.2"
@@ -37,6 +36,9 @@ rootProject.name = 'Multiproject Template'
 //include "versions:1.19.2"
 //include "versions:1.19.4"
 //include "versions:1.20.1"
+// ----------
+// === FABRIC ===
+include "versions:fabric_1.20.1"
 // ----------
 
 // You can add as many modules as you want, for this copy the content of "example_module" to each new module!
